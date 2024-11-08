@@ -27,7 +27,7 @@
                    <a href="projetoIndividual.html">Quem Somos</a> 
                     <a href="Cultos.html">Cultos</a>
                     <a href="LifeGroups.html">Life Groups</a>
-                    <a href="DizimosEOfertas.html">Dizimos e ofertas</a>
+                    <a href="cadastro.html">Dizimos e ofertas</a>
                 </ul>
             </nav>
 
@@ -95,8 +95,7 @@
 
 <script>
 
-  // Array para armazenar empresas cadastradas para validação de código de ativação 
-  let listaEmpresasCadastradas = [];
+  // Array para armazenar empresas cadastradas para validação de código de ativação
 
   function cadastrar() {
     // aguardar();
@@ -105,7 +104,7 @@
     // Agora vá para o método fetch logo abaixo
     var nomeVar = nome_input.value;
     var emailVar = email_input.value;
-    var endereco = endereco_input.value
+    var enderecoVar = endereco_input.value
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
     var idEmpresaVincular
@@ -140,7 +139,7 @@
         nomeServer: nomeVar,
         emailServer: emailVar,
         senhaServer: senhaVar,
-        idEmpresaVincularServer: idEmpresaVincular
+        enderecoServer: enderecoVar 
       }),
     })
       .then(function (resposta) {
@@ -170,27 +169,4 @@
     return false;
   }
 
-  // Listando empresas cadastradas 
-  function listar() {
-    fetch("/empresas/listar", {
-      method: "GET",
-    })
-      .then(function (resposta) {
-        resposta.json().then((empresas) => {
-          empresas.forEach((empresa) => {
-            listaEmpresasCadastradas.push(empresa);
-
-            console.log("listaEmpresasCadastradas")
-            console.log(listaEmpresasCadastradas[0].codigo_ativacao)
-          });
-        });
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-      });
-  }
-
-  function sumirMensagem() {
-    cardErro.style.display = "none";
-  }
 </script>

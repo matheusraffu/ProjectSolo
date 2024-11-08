@@ -52,3 +52,7 @@ nav ul a:not(.btn):after {
 nav ul a:hover::after{
   width: 100%;
 }
+.image {
+  width: 100%;
+  height: 510px;
+}
