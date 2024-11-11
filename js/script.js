@@ -1,17 +1,12 @@
-let count = 1;
-document.getElementById("radio1").checked = true;
-
-setInterval ( function() {
-nextimage();
-}, 2000)
-
-
-function nextimage() {
-    count++;
-    if (count > 4) {
-        count = 1
-    }
-
-    document.getElementById("radio"+ count).checked = true;
-
-}
+var swiper = new Swiper(".swiper", {
+    cssMode: true,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    keyboard: true,
+  });
