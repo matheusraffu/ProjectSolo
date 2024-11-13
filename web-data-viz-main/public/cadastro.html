@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" />
 </head>
 
-<body onload="listar()">
+<body>
   <!--header inicio-->
   <header>
         
@@ -104,10 +104,9 @@
     // Agora vá para o método fetch logo abaixo
     var nomeVar = nome_input.value;
     var emailVar = email_input.value;
-    var enderecoVar = endereco_input.value
+    var enderecoVar = endereco_input.value;
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
-    var idEmpresaVincular
 
     // Verificando se há algum campo em branco
     if (
@@ -119,11 +118,6 @@
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
         "(Mensagem de erro para todos os campos em branco)";
-
-      finalizarAguardar();
-      return false;
-    } else {
-      setInterval(sumirMensagem, 5000);
     }
 
 
