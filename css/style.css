@@ -39,6 +39,11 @@ body {
     width: 100%;
   }
    
+  .top {
+    height: 600px;
+    margin-top: 60px;
+  }
+
    header, nav ul {
     display: flex;
     justify-content: flex-end;
@@ -546,8 +551,8 @@ span {
           flex-direction: column;   /* Empilha os itens verticalmente */
           align-items: center;      /* Centraliza os inputs dentro do container */
           padding: 1rem 2rem;
-          width: 420px;
-          height: 400px;
+          width: 720px;
+          height: 450px;
           background-color: white;  /* Fundo branco para destacar */
           border-radius: 10px;      /* Bordas arredondadas */
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leve sombra para destaque */
@@ -555,7 +560,7 @@ span {
 
         .input-box {
           width: 100%;
-          max-width: 500px;
+          max-width: 700px;
           margin-bottom: 0.8rem;
         }
 
@@ -563,6 +568,7 @@ span {
           margin: 0.4rem 0; /* Diminui a margem superior e inferior */
           padding: 0.6rem 1rem; /* Reduz o padding interno */
           border: none;
+          width: 500px;
           border-radius: 8px; /* Ajusta a borda arredondada */
           box-shadow: 1px 1px 4px #0000001c; /* Suaviza a sombra */
         }
@@ -585,6 +591,148 @@ span {
           background: blue;
           color: white;
         }
+
+
+        .form-wrapper-login {
+          display: flex;
+          justify-content: center;  /* Centraliza horizontalmente */
+          align-items: center;      /* Centraliza verticalmente */
+          min-height: 450px;        /* Ocupa a altura total da janela do navegador */
+        }
+        
+        .input-group-login {
+          display: flex;
+          flex-direction: column;   /* Empilha os itens verticalmente */
+          align-items: center;      /* Centraliza os inputs dentro do container */
+          padding: 1rem 2rem;
+          width: 720px;
+          height: 250px;
+          background-color: white;  /* Fundo branco para destacar */
+          border-radius: 10px;      /* Bordas arredondadas */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leve sombra para destaque */
+        }
+
+        .input-box-login {
+          width: 100%;
+          max-width: 700px;
+          margin-bottom: 0.8rem;
+        }
+
+        .input-box-login input {
+          margin: 0.4rem 0; /* Diminui a margem superior e inferior */
+          padding: 0.6rem 1rem; /* Reduz o padding interno */
+          border: none;
+          width: 500px;
+          border-radius: 8px; /* Ajusta a borda arredondada */
+          box-shadow: 1px 1px 4px #0000001c; /* Suaviza a sombra */
+        }
+
+        .form-wrapper-login span {
+          font-size: 14px;
+        }
+
+        .botao-login {
+          color: #0e0c0c;
+          width: 100px;
+          height: 50px;
+          background-color: #f5f5f5;
+          border-radius: 10px;
+          border: transparent;
+          transition: 1.0s;
+        }
+
+        .botao-login:hover {
+          background: blue;
+          color: white;
+        }
+
+
+        .Select-login {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .Select-login select {
+          border-radius: 10px;
+        }
+
+        
+
+
+      [type=radio] {
+          display: none;
+      }
+      
+      #slider {
+          height: 35vw;
+          max-height: 500px;
+          position: relative;
+          perspective: 1000px;
+          transform-style: preserve-3d;
+          margin: auto;
+      }
+      
+      #slider label {
+          margin: auto;
+          width: 60%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          right: 0;
+          cursor: pointer;
+          border-radius: 4px;
+          background: #fff;
+          box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+          transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+      
+      #s1:checked ~ #slide1,
+      #s2:checked ~ #slide2,
+      #s3:checked ~ #slide3,
+      #s4:checked ~ #slide4,
+      #s5:checked ~ #slide5 {
+          transform: translate3d(0, 0, 0);
+          z-index: 3;
+          box-shadow: 0 13px 25px rgba(0, 0, 0, 0.3), 0 11px 7px rgba(0, 0, 0, 0.19);
+      }
+      
+      #s1:checked ~ #slide2,
+      #s2:checked ~ #slide3,
+      #s3:checked ~ #slide4,
+      #s4:checked ~ #slide5,
+      #s5:checked ~ #slide1 {
+          transform: translate3d(-15%, 0, -100px);
+          z-index: 2;
+      }
+      
+      #s1:checked ~ #slide3,
+      #s2:checked ~ #slide4,
+      #s3:checked ~ #slide5,
+      #s4:checked ~ #slide1,
+      #s5:checked ~ #slide2 {
+          transform: translate3d(-30%, 0, -200px);
+          z-index: 1;
+      }
+      
+      #s1:checked ~ #slide4,
+      #s2:checked ~ #slide5,
+      #s3:checked ~ #slide1,
+      #s4:checked ~ #slide2,
+      #s5:checked ~ #slide3 {
+          transform: translate3d(30%, 0, -200px);
+          z-index: 1;
+      }
+      
+      #s1:checked ~ #slide5,
+      #s2:checked ~ #slide1,
+      #s3:checked ~ #slide2,
+      #s4:checked ~ #slide3,
+      #s5:checked ~ #slide4 {
+          transform: translate3d(15%, 0, -100px);
+          z-index: 2;
+      }
+      
 
 footer {
   font-size: 16px;

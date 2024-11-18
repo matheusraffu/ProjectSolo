@@ -6,74 +6,174 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AquaTech | Login</title>
-
-    <script src="./js/sessao.js"></script>
-
-    <link rel="stylesheet" href="./css/estilo.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>Agape | Página Inicial</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  
 </head>
-
-<body>
-
-    <!--Header-->
 
     <header>
         
-        <div class="container">
-            <nav>
-                <a href="projetoIndividual.html">
-                    <img src="../../img/icons8-house-64.png" alt="logo">
-                </a>
-                    <ul class="ul">
-                       <a href="projetoIndividual.html">Quem Somos</a> 
-                        <a href="Cultos.html">Cultos</a>
-                        <a href="LifeGroups.html">Life Groups</a>
-                        <a href="DizimosEOfertas.html">Dizimos e ofertas</a>
-                    </ul>
-                </nav>
-    
-        </div>
-    </header>
+      <div class="container">
+          <nav>
+              <a href="projetoIndividual.html">
+                  <img src="../img/icons8-house-64.png" alt="logo" style="height: 80px;">
+              </a>
+                  <ul class="ul">
+                      <a href="Inicio.html"> Inicio </a>
+                     <a href="projetoIndividual.html">Quem Somos</a> 
+                      <a href="Cultos.html">Cultos</a>
+                      <a href="login.html">Life Groups</a>
+                      <a href="cadastro.html">Dizimos e ofertas</a>
+                      
+                  </ul>
+              </nav>
+             </div>
+  </header>
+
 
     <div class="login">
         <div class="alerta_erro">
             <div class="card_erro" id="cardErro">
                 <span id="mensagem_erro"></span>
-            </div>
-        </div>
-        <div class="container">
-            <div class="card card-login">
-                <h2>Olá de volta!</h2>
-                <div class="formulario">
-                    <div class="campo">
-                        <span>E-mail:</span>
-                        <input id="email_input" type="text" placeholder="Login">
-                    </div>
-                    <div class="campo">
-                        <span>Senha:</span>
-                        <input id="senha_input" type="password" placeholder="******">
-                    </div>
-                    <button class="botao" onclick="entrar()">Entrar</button>
-                </div>
 
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                <div class="form-wrapper-login">
+
+                    <div class="input-group-login">
+                      <div class="input-box-login">
+                        <span>E-mail:</span>
+                        <input id="email_input" type="text" placeholder="meuemail@provedor.com" />
+                      </div>
+                      <div class="input-box-login">
+                        <span>Senha:</span>
+                        <input id="senha_input" type="password" placeholder="******" />
+                        <br> <br>
+                        
+                        <div class="Select-login">
+                        <span>Participa de um life group</span>
+                        <select id="resposta" name="resposta">
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
+                          </select>
+                        </div>
+
+                          <button class="botao-login" onclick="entrar()">Entrar</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                
 
                 <div id="div_erros_login"></div>
             </div>
         </div>
     </div>
 
-    <!--footer inicio-->
-    <div class="footer">
-        <div class="container">
-            <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-            <span class="version">v1.0.0</span>
-        </div>
+    <footer>
+        <div id="footer_content">
+        <ul class="footer-list">
+            <li> 
+                <h3>Sobre</h3>
+            </li>
+                <li>
+                <a href="#" class="footer-link">Sobre nós</a>
+               </li>
+                <li>
+                <a href="#" class="footer-link">Sobre Mim</a>
+               </li>
+                <li>
+                <a href="#" class="footer-link">Nosso time</a>
+               </li>
+                <li>
+                <a href="#" class="footer-link">Nosso Campus</a>
+               </li>
+                <li>
+                <a href="#" class="footer-link">Agape International</a>
+               </li>
+                <li>
+                <a href="#" class="footer-link">Visão do Futuro </a>
+               </li>
+            </li>
+        </ul>
+    
+            <ul class="footer-list">
+            <li> 
+                <h3>Midia</h3>
+            </li>
+                <li>
+                <a href="#" class="footer-link">Cultos</a>
+               </li>
+                <li>
+                <a href="#" class="footer-link">Treinamentos</a>
+               </li>
+                <li>
+                <a href="#" class="footer-link">Especiais</a>
+               </li>
+                <li>
+                <a href="#" class="footer-link">Series</a>
+               </li>
+                <li>
+                <a href="#" class="footer-link">Podcast</a>
+               </li>
+                <li>
+                <a href="#" class="footer-link">Playlist</a>
+               </li>
+            </ul>
+    
+            <ul class="footer-list">
+            <li> 
+                <h3>Conecte-se</h3>
+            </li>
+                <li>
+                <a href="#" class="footer-link">Preciso de Jesus</a>
+               </li>
+                <li>
+                <a href="#" class="footer-link">Life Groups</a>
+               </li>
+                <li>
+                <a href="#" class="footer-link">Seja Um voluntario</a>
+               </li>
+                <li>
+                <a href="#" class="footer-link">Ministerios</a>
+               </li>
+                <li>
+                <a href="#" class="footer-link">Agenda</a>
+               </li>
+            </ul>
+    
+            <ul class="footer-list">
+            <li> 
+                <h3>Contato</h3>
+            </li>
+                <li>
+                <a href="#" class="footer-link">Fale Conosco</a>
+               </li>
+                <li>
+                <a href="#" class="footer-link">Precisa de Oração</a>
+               </li>
+                <li>
+                <a href="#" class="footer-link">Dizimos e Ofertas</a>
+               </li>
+                <li>
+                <a href="#" class="footer-link">Seu email</a>
+               </li>
+        </ul>
+    
+    
+       
     </div>
-    <!--footer fim-->
+     <div id="footer_copyright">
+            &#169
+            2023 all right reservice
+        </div>
+     </footer>
+      <!--footer fim-->
 
 </body>
 
