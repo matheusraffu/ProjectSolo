@@ -538,17 +538,17 @@ canvas {
 }
 
 #slider {
-  height: 25vw; /* Altura reduzida */
-  max-height: 300px; /* Limite de altura menor */
+  height: 36vw; /* Altura aumentada */
+  max-height: 400px; /* Limite de altura maior */
   position: relative;
-  perspective: 800px; /* Perspectiva ajustada para menor profundidade */
+  perspective: 1000px; /* Maior profundidade */
   transform-style: preserve-3d;
-  margin: auto;
+  margin-left: 250px;
 }
 
 #slider label {
   margin: auto;
-  width: 50%; /* Largura reduzida */
+  width: 60%; /* Largura aumentada */
   height: 100%;
   position: absolute;
   left: 0;
@@ -556,7 +556,7 @@ canvas {
   cursor: pointer;
   border-radius: 4px;
   background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2); /* Sombras ajustadas */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 3px 3px rgba(0, 0, 0, 0.2); /* Sombras levemente maiores */
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -567,7 +567,7 @@ canvas {
 #s5:checked ~ #slide5 {
   transform: translate3d(0, 0, 0);
   z-index: 3;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 8px 5px rgba(0, 0, 0, 0.19); /* Redução das sombras */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 10px 8px rgba(0, 0, 0, 0.19); /* Sombras maiores */
 }
 
 #s1:checked ~ #slide2,
@@ -575,7 +575,7 @@ canvas {
 #s3:checked ~ #slide4,
 #s4:checked ~ #slide5,
 #s5:checked ~ #slide1 {
-  transform: translate3d(-10%, 0, -80px); /* Ajuste da posição */
+  transform: translate3d(-12%, 0, -90px); /* Ajuste da posição */
   z-index: 2;
 }
 
@@ -584,7 +584,7 @@ canvas {
 #s3:checked ~ #slide5,
 #s4:checked ~ #slide1,
 #s5:checked ~ #slide2 {
-  transform: translate3d(-20%, 0, -150px); /* Ajuste da profundidade */
+  transform: translate3d(-24%, 0, -170px); /* Maior profundidade */
   z-index: 1;
 }
 
@@ -593,7 +593,7 @@ canvas {
 #s3:checked ~ #slide1,
 #s4:checked ~ #slide2,
 #s5:checked ~ #slide3 {
-  transform: translate3d(20%, 0, -150px);
+  transform: translate3d(24%, 0, -170px);
   z-index: 1;
 }
 
@@ -602,7 +602,7 @@ canvas {
 #s3:checked ~ #slide2,
 #s4:checked ~ #slide3,
 #s5:checked ~ #slide4 {
-  transform: translate3d(10%, 0, -80px);
+  transform: translate3d(12%, 0, -90px);
   z-index: 2;
 }
 
@@ -615,7 +615,7 @@ canvas {
 .loc {
   display: flex;
   justify-content: center;
-  margin-left: 290px;
+  margin-left: 500px;
 }
 
 .loc {
@@ -635,7 +635,7 @@ canvas {
 }
 
 .container-cards {
-  width: 700px;
+  width: 1380px;
   display: flex;
   padding: 0;
   justify-content: flex-end; /* Garante que os itens fiquem à esquerda do contêiner */
@@ -644,18 +644,100 @@ canvas {
 
 .container-implacaveis {
   display: flex; /* Usa flexbox para alinhar os itens lado a lado */
+  justify-content: flex-start;
   width: 100%; /* Garante que ocupe toda a largura da tela */
-  height: 100vh; /* Preenche toda a altura da tela */
+  height: 300px; /* Preenche toda a altura da tela */
+  font-size: 20px;
+
 }
 
 .text-implacaveis {
-  flex: 1; /* O texto vai ocupar o restante do espaço disponível */
-  padding: 20px; /* Adiciona um padding ao redor do conteúdo do texto */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* O texto vai ocupar o restante do espaço disponível */
+  padding: 400px; /* Adiciona um padding ao redor do conteúdo do texto */
   font-size: 16px; /* Ajusta o tamanho da fonte conforme necessário */
-  text-align: left; /* Garante que o texto dentro de h4 e p seja alinhado à esquerda */
+  text-align: right; /* Garante que o texto dentro de h4 e p seja alinhado à esquerda */
   overflow-y: auto; /* Caso o conteúdo seja grande, permite rolar a área de texto */
 }
+
+.text-implacaveis p{
+  font-size: 200px;
+}
+
 
 .text-implacaveis h4 {
   margin-top: 0; /* Remove o margin superior do título */
 }
+
+.container-qrcode {
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 450px ;
+  background-color: transparent;
+  width: 180px;
+  height: 250px;
+  border: #000000 solid 2px;
+}
+.container-qrcode img {
+  width: 150px;
+  height: 150px;
+}
+
+.container-cards2 {
+  width: 90%;
+  display: flex;
+  padding-right: 20px;
+  justify-content: flex-start; /* Garante que os itens fiquem à esquerda do contêiner */
+  gap: 100px; /* Ajuste a distância entre os itens */
+}
+
+.visit-lifegroup {
+  display: flex;
+  flex-direction: column; /* Organize os itens em coluna */
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 2px solid black;
+  padding: 0px; /* Adiciona um pouco de padding para o conteúdo não ficar encostado nas bordas */
+}
+
+.visit-lifegroup h1 {
+  text-align: center; /* Centraliza o título */
+  margin-bottom: 1px; /* Espaço abaixo do título */
+}
+
+.visit-lifegroup p {
+  text-align: center; /* Centraliza o parágrafo */
+  margin-bottom: 20px; /* Espaço abaixo do parágrafo */
+}
+
+.visit-button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.visit-lifegroup a {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+.visit-button:hover {
+  background-color: #0056b3; /* Muda a cor do botão quando o mouse passa sobre ele */
+}
+
+.LLLL {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
