@@ -3,3 +3,27 @@ node_modules
 package-lock.json
 
 .github
+
+
+  iframe {
+        border-radius: 12px;          /* Borda arredondada para o iframe */
+        flex: 1;   
+        margin-left: 40px;  
+        margin-top: 100px;                 /* Faz o iframe ocupar o espaço disponível */
+    }
+    
+    .text-content {
+        flex: 1;   
+        margin-top: 200px;                   /* Faz o texto ocupar o espaço restante */
+    }
+    
+    h1 {
+        margin: 0;                    /* Remove a margem padrão do título */
+    }
+    
+    p {
+        margin-top: 10px; 
+        font-size: 17px;     
+        line-height: 2.5; 
+        text-indent: 20px;       /* Adiciona um espaço entre o título e o parágrafo */
+    }

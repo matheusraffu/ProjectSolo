@@ -398,6 +398,55 @@ display: flex;
 flex-direction: column;
 }
 
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  padding-top: 50px;
+  text-align: center;
+  transition: 1s;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar a {
+  padding: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+}
+
+.sidebar a i {
+  margin-right: 10px;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+}
+
+.sidebar h2 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.sidebar .header-text {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
 .btn-nav-white {
   width: 40%;
   background-color: white;
@@ -454,8 +503,8 @@ flex-direction: column;
   flex-direction: column;
   padding: 1%;
   box-shadow: 2px 2px 2px 3px #0000001e;
-  width: 300px;
-  height: 400px;
+  width: 250px;
+  height: 420px;
   border-radius: 10px;
   margin-left: 50px;
   text-align: center;
@@ -465,7 +514,7 @@ flex-direction: column;
   display: flex;
   align-items: flex-end;
   justify-content: end;
-  width: 300px;
+  width: 250px;
   height: 200px;
   border-radius: 10px;
 }
@@ -500,11 +549,11 @@ flex-direction: column;
 
 .Botao-Lifes {
   display: flex;
-  align-items: flex-end;
+  
   justify-content: center;
   width: 100%;
   height: 100;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 .Animate-botao {
@@ -532,7 +581,7 @@ flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 50px;
-  margin-left: 320px;
+  margin-left: 220px;
 }
 
 
@@ -541,8 +590,14 @@ flex-direction: column;
   display: none;
 }
 
+.exit{
+  padding-left: 1240px;
+}
+
 .fotospages {
-  margin-left: 690px;
+  height: 500px;
+  width: 900px;
+  margin-left: 340px;
   margin-top: 30px;
 }
 
@@ -621,14 +676,12 @@ flex-direction: column;
   height: 400px;
 }
 
-.loc {
-  display: flex;
-  justify-content: center;
-  margin-left: 400px;
-}
 
 .loc {
   font-size: 30px;
+  display: flex;
+  justify-content: center;
+  margin-left: 250px;
 }
 
 .cards-liders {
@@ -644,7 +697,7 @@ flex-direction: column;
 }
 
 .container-cards {
-  width: 1380px;
+  width: 1050px;
   display: flex;
   padding: 0;
   justify-content: flex-end; /* Garante que os itens fiquem à esquerda do contêiner */
@@ -663,7 +716,7 @@ flex-direction: column;
 
 .text-implacaveis {
   display: flex;
-  padding-left: 500px; /* Adiciona um padding ao redor do conteúdo do texto */
+  padding-left: 300px; /* Adiciona um padding ao redor do conteúdo do texto */
   font-size: 20px; /* Ajusta o tamanho da fonte conforme necessário */
 }
 
@@ -694,12 +747,35 @@ flex-direction: column;
 }
 
 .container-cards2 {
-  width: 90%;
   display: flex;
-  padding-left: 100px;
-  justify-content: flex-start; /* Garante que os itens fiquem à esquerda do contêiner */
-  gap: 100px; /* Ajuste a distância entre os itens */
+  flex-wrap: wrap; /* Permite quebrar linhas se não couber */
+  justify-content: center; /* Centraliza os itens */
+  align-items: center; /* Alinha verticalmente */
+  gap: 30px; /* Ajusta a distância entre os itens */
+  padding: 10px;
+  width: 90%; /* Garante que ocupe toda a largura */
 }
+
+.container-cards2 .card-item {
+  flex: 1 1 calc(25% - 30px); /* Ajusta a largura para 4 itens por linha */
+  max-width: 250px; /* Define um tamanho máximo */
+  min-width: 180px; /* Define um tamanho mínimo */
+  height: 200px; /* Altura padrão */
+  background-color: #212124; /* Cor de fundo */
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-item h4, .card-item p {
+  margin: 10px 0;
+  color: white;
+}
+
 
 
 .container-QuantidadePessoas {
@@ -708,7 +784,7 @@ flex-direction: column;
   border-radius: 10px;
   flex-direction: column;
   align-items: center;
-  margin-left: 450px ;
+  margin-left: 300px ;
   background-color: transparent;
   width: 340px;
   height: 250px;
@@ -716,12 +792,12 @@ flex-direction: column;
 }
 
 .container-cards3 {
-  margin-top: 100px;
+  margin-top: 50px;
   padding-bottom: 50px;
-  width: 95%;
+  width: 100%;
   display: flex;
   justify-content: space-around; /* Garante que os itens fiquem à esquerda do contêiner */
-  gap: 60px; /* Ajuste a distância entre os itens */
+  gap: 40px; /* Ajuste a distância entre os itens */
 }
 
 .media-idade {
@@ -729,7 +805,7 @@ flex-direction: column;
   flex-direction: column; /* Organize os itens em coluna */
   justify-content: flex-start;
   align-items: center;
-  width: 500px;
+  width: 250px;
   height: 250px;
   background-color: transparent;
   border-radius: 10px;
@@ -737,14 +813,19 @@ flex-direction: column;
   padding: 0px; /* Adiciona um pouco de padding para o conteúdo não ficar encostado nas bordas */
 }
 
-
+.locates {
+  text-align: center;          /* Centraliza horizontalmente */
+  display: block;               /* Garante que o elemento ocupe toda a largura */
+  margin: 20px auto;            /* Centraliza o elemento com margem automática */
+  font-size: 24px;              /* Ajuste conforme necessário */
+  font-weight: bold;            /* Opcional: para deixar em negrito */
+}
 
 .visit-lifegroup {
   display: flex;
   flex-direction: column; /* Organize os itens em coluna */
   justify-content: center;
   align-items: center;
-  width: 500px;
   height: 250px;
   background-color: transparent;
   border-radius: 10px;
@@ -786,6 +867,12 @@ flex-direction: column;
   gap: 20px;
 }
 
-.mapa iframe{
-  border: #000000 solid 2px;
+.mapa {
+  margin-top: 20px;
+  margin-left: 600px;
+}
+
+
+.cards-Localizacao {
+margin-left: 130px;
 }
