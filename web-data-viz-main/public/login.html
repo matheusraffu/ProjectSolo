@@ -11,7 +11,6 @@
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -59,6 +58,9 @@
                         <br> <br>
                           <button class="botao-login" onclick="entrar()">Entrar</button>
                       </div>
+                      <a href="cadastro.html">
+                        <p>Nao é cadastrado?</p>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -143,15 +145,12 @@
 
 
     function entrar() {
-        aguardar();
+
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
-        if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            finalizarAguardar();
+        if (emailVar == "" || senhaVar == "") {;
             return false;
         }
         else {
@@ -183,9 +182,10 @@
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.SENHA_USUARIO = json.senha;
                     sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.idLifeGroup_USUARIO = json.idLifeGroup;
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "dashboard/LocateDashboards.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
@@ -196,12 +196,12 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizarAguardar(texto);
                 });
             }
 
         }).catch(function (erro) {
-            console.log(erro);
+             console.log(erro);
+             return alert(`Senha incorreta`)
         })
 
         return false;
