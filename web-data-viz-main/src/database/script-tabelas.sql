@@ -6,57 +6,46 @@
 comandos para mysql server
 */
 
-CREATE DATABASE aquatech;
+create database Agape;
+use agape;
 
-USE aquatech;
-
-CREATE TABLE empresa (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	razao_social VARCHAR(50),
-	cnpj CHAR(14),
-	codigo_ativacao VARCHAR(50)
-);
-
+-- Tabela de usuários
 CREATE TABLE usuario (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50),
-	fk_empresa INT,
-	FOREIGN KEY (fk_empresa) REFERENCES empresa(id)
+    id INT PRIMARY KEY AUTO_INCREMENT,  -- ID do usuário
+    nome VARCHAR(70),
+    email VARCHAR(150),
+    idade CHAR(2),
+    senha CHAR(8),
+    idLifeGroup char(5)  -- Relacionado ao grupo de vida
+);
+select * from usuario;
+-- Tabela de eventos
+CREATE INDEX idx_idLifeGroup ON usuario(idLifeGroup);
+
+-- Tabela de eventos
+CREATE TABLE evento (
+    id_evento INT PRIMARY KEY AUTO_INCREMENT,  -- ID do evento
+    fkLifeGroup CHAR(5),  -- Relacionado ao grupo de vida
+    data_evento DATE NOT NULL,  -- Data do evento
+    hora_evento TIME NOT NULL,  -- Hora do evento
+    qtd_pessoas INT,  -- Quantidade de pessoas no evento
+    CONSTRAINT fkLifeGroup FOREIGN KEY (fkLifeGroup) REFERENCES usuario(idLifeGroup)  -- Chave estrangeira
 );
 
-CREATE TABLE aviso (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
-);
+DELIMITER $$
 
-create table aquario (
-/* em nossa regra de negócio, um aquario tem apenas um sensor */
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	descricao VARCHAR(300),
-	fk_empresa INT,
-	FOREIGN KEY (fk_empresa) REFERENCES empresa(id)
-);
+CREATE TRIGGER atualiza_qtd_pessoas
+AFTER INSERT ON participacao
+FOR EACH ROW
+BEGIN
+    -- Aumenta a quantidade de pessoas no evento relacionado
+    UPDATE evento
+    SET qtd_pessoas = qtd_pessoas + 1
+    WHERE id_evento = NEW.id_evento;
+END$$
 
-/* esta tabela deve estar de acordo com o que está em INSERT de sua API do arduino - dat-acqu-ino */
+DELIMITER ;
 
-create table medida (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	dht11_umidade DECIMAL,
-	dht11_temperatura DECIMAL,
-	luminosidade DECIMAL,
-	lm35_temperatura DECIMAL,
-	chave TINYINT,
-	momento DATETIME,
-	fk_aquario INT,
-	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
-);
-
-insert into empresa (razao_social, codigo_ativacao) values ('Empresa 1', 'ED145B');
-insert into empresa (razao_social, codigo_ativacao) values ('Empresa 2', 'A1B2C3');
-insert into aquario (descricao, fk_empresa) values ('Aquário de Estrela-do-mar', 1);
-insert into aquario (descricao, fk_empresa) values ('Aquário de Peixe-dourado', 2);
+INSERT INTO evento (fkLifeGroup, data_evento, hora_evento, qtd_pessoas) VALUES
+('56789', '2024-12-01', '10:00:00', 20),
+('12345', '2024-12-05', '14:00:00', 25);
