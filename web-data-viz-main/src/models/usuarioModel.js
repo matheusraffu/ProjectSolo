@@ -22,7 +22,30 @@ function cadastrar(nome, email, senha, idade) {
     return database.executar(instrucaoSql);
 }
 
+function ReceberDadosEventos(idLifeGroup) {
+    
+    var instrucaoSql = `
+SELECT DISTINCT e.id_evento as idEvento, e.qtd_pessoas as QuantidadePessoas, e.data_evento as DataEvento FROM evento e JOIN usuario u ON u.idLifeGroup = e.fkLifeGroup where e.fkLifeGroup = '${idLifeGroup}' ;
+`;
+console.log("Executando a instrução SQL: \n" + instrucaoSql);
+        return database.executar(instrucaoSql);
+    ;
+}
+
+function MediaIdade(idLifeGroup) {
+    
+    var instrucaoSql = `
+SELECT round(avg(idade)) as MediaIdadeLife from usuario where idLifeGroup = '${idLifeGroup}' ;
+`;
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+        return database.executar(instrucaoSql);
+    ;
+}
+
+
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar,
+    ReceberDadosEventos,
+    MediaIdade
 };

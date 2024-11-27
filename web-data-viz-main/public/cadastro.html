@@ -2,174 +2,111 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Agape | Página Inicial</title>
-    <link rel="stylesheet" href="../../css/style.css">
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  
+  <title>Agape | Página Inicial</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+
 </head>
 
-    <header>
-        
-      <div class="container">
-          <nav>
-              <a href="projetoIndividual.html">
-                  <img src="../../img/c0fde4c0-4e08-465d-997c-a31cc020fc90.png" alt="logo" style="height: 80px;">
-              </a>
-                  <ul class="ul">
-                      <a href="Inicio.html"> Inicio </a>
-                     <a href="../../public/SOBRE/sobremim.html  ">sobre mim</a> 
-                      <a href="../../public/MIDIA/cultos.html">Cultos</a>
-                      <a href="login.html">Life Groups</a>
-                      <a href="cadastro.html">Dizimos e ofertas</a>
-                      
-                  </ul>
-              </nav>
-             </div>
-  </header>
+<header>
 
-  <body>
-    <div class="LOL">
-        <img class="imgg" src="../../../ProjectSolo/img (2)/NOSSA EQUIPE (2).png" ></video>
-        </div>
-<br><br><br>  <br> 
+  <div class="container">
+    <nav>
+      <a href="projetoIndividual.html">
+        <img src="../../img/c0fde4c0-4e08-465d-997c-a31cc020fc90.png" alt="logo" style="height: 80px;">
+      </a>
+      <ul class="ul">
+        <a href="index.html"> Inicio </a>
+        <a href="SOBRE/sobremim.html">sobre mim</a>
+        <a href="MIDIA/cultos.html">Cultos</a>
+        <a href="login.html">Life Groups</a>
 
-<div class="form-wrapper">
-  <div class="input-group">
-    <div class="input-box">
-      <span>Nome Sobrenome:</span>
-      <input id="nome_input" type="text" placeholder="Seu nome" required/>
-    </div>
-    <div class="input-box">
-      <span>Idade:</span>
-      <input id="idade_input" type="text" placeholder="Sua Idade" required/>
-    </div>
-    <div class="input-box">
-      <span>E-mail:</span>
-      <input id="email_input" type="text" placeholder="meuemail@provedor.com" />
-    </div>
-    <div class="input-box">
-      <span>Senha:</span>
-      <input id="senha_input" type="password" placeholder="******" />
-    </div>
-    <div class="input-box">
-      <span>Confirmação da Senha:</span>
-      <input id="confirmacao_senha_input" type="password" placeholder="******" />
-    </div>
-    <button class="botao" onclick="cadastrar()">Cadastrar</button>
+      </ul>
+    </nav>
   </div>
-</div>
-        <div id="mensagem_erro"></div>
-      <br><br><br>
+</header>
+
+<body>
+  <div class="LOL">
+    <img class="imgg" src="img (2)/NOSSA EQUIPE (2).png"></video>
+  </div>
+  <br><br><br> <br>
+
+  <div class="form-wrapper">
+    <div class="input-group">
+      <div class="input-box">
+        <span>Nome Sobrenome:</span>
+        <input id="nome_input" type="text" placeholder="Seu nome" required />
+      </div>
+      <div class="input-box">
+        <span>Idade:</span>
+        <input id="idade_input" type="text" placeholder="Sua Idade" required />
+      </div>
+      <div class="input-box">
+        <span>E-mail:</span>
+        <input id="email_input" type="text" placeholder="meuemail@provedor.com" />
+      </div>
+      <div class="input-box">
+        <span>Senha:</span>
+        <input id="senha_input" type="password" placeholder="******" />
+      </div>
+      <div class="input-box">
+        <span>Confirmação da Senha:</span>
+        <input id="confirmacao_senha_input" type="password" placeholder="******" />
+      </div>
+      <button class="botao" onclick="cadastrar()">Cadastrar</button>
+    </div>
+  </div>
+  <div id="mensagem_erro"></div>
+  <br><br><br>
 
   <!--footer inicio-->
   <footer>
     <div id="footer_content">
-    <ul class="footer-list">
-        <li> 
-            <h3>Sobre</h3>
-        </li>
-            <li>
-            <a href="#" class="footer-link">Sobre nós</a>
-           </li>
-            <li>
-            <a href="#" class="footer-link">Sobre Mim</a>
-           </li>
-            <li>
-            <a href="#" class="footer-link">Nosso time</a>
-           </li>
-            <li>
-            <a href="#" class="footer-link">Nosso Campus</a>
-           </li>
-            <li>
-            <a href="#" class="footer-link">Agape International</a>
-           </li>
-            <li>
-            <a href="#" class="footer-link">Visão do Futuro </a>
-           </li>
-        </li>
-    </ul>
-
         <ul class="footer-list">
-        <li> 
-            <h3>Midia</h3>
-        </li>
             <li>
-            <a href="#" class="footer-link">Cultos</a>
-           </li>
+                <h3>Sobre</h3>
+            </li>
             <li>
-            <a href="#" class="footer-link">Treinamentos</a>
-           </li>
+                <a href="sobremim.html" class="footer-link">Sobre Mim</a>
+            </li>
             <li>
-            <a href="#" class="footer-link">Especiais</a>
-           </li>
-            <li>
-            <a href="#" class="footer-link">Series</a>
-           </li>
-            <li>
-            <a href="#" class="footer-link">Podcast</a>
-           </li>
-            <li>
-            <a href="#" class="footer-link">Playlist</a>
-           </li>
+                <a href="equipepastoral.html" class="footer-link">Pastores</a>
+            </li>
         </ul>
 
         <ul class="footer-list">
-        <li> 
-            <h3>Conecte-se</h3>
-        </li>
             <li>
-            <a href="#" class="footer-link">Preciso de Jesus</a>
-           </li>
+                <h3>Midia</h3>
+            </li>
             <li>
-            <a href="#" class="footer-link">Life Groups</a>
-           </li>
+                <a href="MIDIA/cultos.html" class="footer-link">Cultos</a>
+            </li>
             <li>
-            <a href="#" class="footer-link">Seja Um voluntario</a>
-           </li>
+                <a href="MIDIA/Series/series.html" class="footer-link">Series</a>
+            </li>
             <li>
-            <a href="#" class="footer-link">Ministerios</a>
-           </li>
-            <li>
-            <a href="#" class="footer-link">Agenda</a>
-           </li>
+                <a href="MIDIA/Playlist/playlist.html" class="footer-link">Playlist</a>
+            </li>
         </ul>
 
-        <ul class="footer-list">
-        <li> 
-            <h3>Contato</h3>
-        </li>
-            <li>
-            <a href="#" class="footer-link">Fale Conosco</a>
-           </li>
-            <li>
-            <a href="#" class="footer-link">Precisa de Oração</a>
-           </li>
-            <li>
-            <a href="#" class="footer-link">Dizimos e Ofertas</a>
-           </li>
-            <li>
-            <a href="#" class="footer-link">Seu email</a>
-           </li>
-    </ul>
-
-
-   
-</div>
- <div id="footer_copyright">
+        
+    </div>
+    <div id="footer_copyright">
         &#169
         2023 all right reservice
     </div>
- </footer>
+</footer>
   <!--footer fim-->
 </body>
 
@@ -180,69 +117,70 @@
   // Array para armazenar empresas cadastradas para validação de código de ativação
 
   function cadastrar() {
-    // aguardar();
+  var nomeVar = document.getElementById("nome_input").value;
+  var EmailVar = document.getElementById("email_input").value;
+  var senhaVar = document.getElementById("senha_input").value;
+  var confirmacaoSenhaVar = document.getElementById("confirmacao_senha_input").value;
+  var IdadeVar = document.getElementById("idade_input").value;
 
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
-    var nomeVar = nome_input.value;
-    var EmailVar = email_input.value;
-    var senhaVar = senha_input.value;
-    var confirmacaoSenhaVar = confirmacao_senha_input.value;
-    var IdadeVar = idade_input.value
-    var resposta = true
+  // Verificação se o e-mail contém '@'
+  if (!EmailVar.includes('@')) {
+    alert('O e-mail deve conter o símbolo "@"');
+    return false; // Cancela a execução
+  }
 
-    // Verificando se há algum campo em branco
-    if (
-      nomeVar == "" ||
-      IdadeVar == "" ||
-      senhaVar == "" ||
-      confirmacaoSenhaVar == ""
-    ) {
-      alert(`Preencha todos os campos`);
-    }
-    
-    if (senhaVar == 
-    confirmacaoSenhaVar) {resposta}
-    else {return alert(`As senhas estão distintas`)}
-
-    // Enviando o valor da nova input
-    fetch("/usuarios/cadastrar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-        nomeServer: nomeVar,
-        emailServer: EmailVar,
-        senhaServer: senhaVar,
-        idadeServer: IdadeVar 
-      }),
-    })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
-
-        if (resposta.ok) {
-
-          console.log("resposta: Deu certo");
-
-          setTimeout(() => {
-            window.location = "login.html";
-          }, "2000");
-
-          limparFormulario();
-         
-        } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
-        }
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        
-      });
-
+  // Verificando se há algum campo em branco
+  if (
+    nomeVar === "" ||
+    IdadeVar === "" ||
+    EmailVar === "" ||
+    senhaVar === "" ||
+    confirmacaoSenhaVar === ""
+  ) {
+    alert('Preencha todos os campos');
     return false;
   }
+
+  // Verificação se o e-mail contém apenas números e símbolos permitidos
+  const regex = /[0-9]/;
+  if (!regex.test(IdadeVar)) {
+    alert('O campo de Idade só pode conter números');
+    return false;
+  }
+
+  // Verificação das senhas
+  if (senhaVar !== confirmacaoSenhaVar) {
+    alert('As senhas estão distintas');
+    return false;
+  }
+
+  // Se todas as verificações passarem, pode continuar o cadastro
+  fetch("/usuarios/cadastrar", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      nomeServer: nomeVar,
+      emailServer: EmailVar,
+      senhaServer: senhaVar,
+      idadeServer: IdadeVar
+    }),
+  })
+  .then(function (resposta) {
+    if (resposta.ok) {
+      setTimeout(() => {
+        window.location = "login.html";
+      }, 2000);
+    } else {
+      throw "Houve um erro ao tentar realizar o cadastro!";
+    }
+  })
+  .catch(function (erro) {
+    console.log(`#ERRO: ${erro}`);
+  });
+
+  return false; // Para evitar o recarregamento da página
+}
 
 </script>

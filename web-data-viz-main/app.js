@@ -17,14 +17,16 @@ var app = express();
 
 var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
-
+var participacaoRouter = require("./src/routes/participacao");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static('public'));
 
 app.use(cors());
 
+app.use ("/participacao", participacaoRouter)
 app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
 

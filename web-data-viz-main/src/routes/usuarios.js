@@ -12,4 +12,21 @@ router.post("/autenticar", function (req, res) {
     usuarioController.autenticar(req, res);
 });
 
+//Requisição e resposta
+
+router.post("/ReceberDadosEventos", function (req, res) {
+    usuarioController.ReceberDadosEventos(req, res);
+})
+module.exports = router;
+
+router.post("/MediaIdade", function (req, res) {
+    usuarioController.MediaIdade(req, res);
+})
+
+module.exports = router;
+
+router.post("/QuantidadePessoas", function (req, res) {
+    usuarioController.QuantidadePessoas(req, res);
+})
+
 module.exports = router;
